@@ -101,7 +101,7 @@ def drawHelpText():
 
 
 try:
-    f = open('customImage.png')
+    f = open('custom_image_home/customImage.png')
     customImage = True
     f.close()
 except OSError:
