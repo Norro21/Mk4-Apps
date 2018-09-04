@@ -93,7 +93,7 @@ def drawEMFscreen():
 def drawCustomImage():
     ugfx.clear()
     ugfx.orientation(90)
-    ugfx.display_image(0, 0, 'customImage.png')
+    ugfx.display_image(0, 0, 'custom_image_home/customImage.png')
 
 def drawHelpText():
     ugfx.clear()
