@@ -19,17 +19,17 @@ def get_strip():
     except: 
         print('couldn't fetch strip json')
     LED(LED.RED).off()
-	
-	LED(LED.GREEN).on()
+
+    LED(LED.GREEN).on()
     try:
         strip_img = http.get(strip['img']).raise_for_status().content
-		ugfx.display_image(0,0,bytearray(strip_img))
+        ugfx.display_image(0,0,bytearray(strip_img))
     except: 
         print('couldn't fetch strip image')
     LED(LED.GREEN).off()
 
 while (not Buttons.is_pressed(Buttons.BTN_A)) and (not Buttons.is_pressed(Buttons.BTN_B)) and (not Buttons.is_pressed(Buttons.BTN_Menu)):
     sleep.wfi()
-	
+
 ugfx.clear()
 app.restart_to_default()
